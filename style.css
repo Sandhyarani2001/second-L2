@@ -10,15 +10,14 @@
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     background-color: transparent;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   }
   
   
   #header .logo {
     width: 123px;
     height: 51px;
-    font-size: 2rem;
-    font-weight: bold;
+    
   }
   
   
@@ -136,20 +135,26 @@
     
   
     /* Sidebar styles */
-  #sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 16rem; /* 64 (Tailwind size) */
-      height: 100%;
-      background-color: white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      z-index: 50;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      padding: 1.5rem;
-    }
+
+
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 16rem; /* 64 (Tailwind size) */
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+        backdrop-filter: blur(3px); /* Adds the blur effect */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-right: 1px solid rgba(255, 255, 255, 0.2); /* Optional border for a more defined glass look */
+      }
+      
     
     /* Close button styles */
     #close-sidebar {
@@ -176,12 +181,20 @@
     
     /* Signup button */
     #sidebar button {
-      color: white;
+      color: rgb(5, 5, 5);
+      /* background-color: rgba(53, 53, 53, 0.568); */
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
       font-size: 1.125rem; /* lg:text-lg */
-      border: none;
+      border: 1px solid black;
       cursor: pointer;
+      width: 100px;
+    }
+    #sidebar #close-sidebar{
+        border: none;
+        text-align: end;
+        width: 0;
+
     }
     
     /* Hide sidebar for large screens */
