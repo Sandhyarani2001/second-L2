@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", serif;
+    padding: 1.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    background-color: transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  #header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  
+  #header nav {
+    display: none;
+    gap: 2.5rem;
+    font-weight: 600;
+    align-items: center; 
+  }
+  
+  #header nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+  }
+  
+  #header nav button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Navigation styles for large screens */
+  @media (min-width: 1024px) {
+    #header {
+     padding-right: 7rem;
+     padding-left: 7rem;
+     box-shadow: transparent;
+    }
+    #header nav {
+      display: flex;
+    }
+    #header nav a {
+      font-size: 1.125rem; /* lg:text-lg */
+    }
+    #header nav button {
+      font-size: 1rem; /* lg:text-base */
+      border-radius: 30px;
+    }
+  }
+  
+  
+  
+  #carousel {
+      transition: background-color 0.5s ease;
+  }
+  
+  .splide__slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .splide__arrow {
+      background: none;
+      color: white;
+      border: 2px solid white;
+      border-radius: 50%;
+      padding: 10px;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .splide__arrow svg {
+      fill: white;
+      width: 24px;
+      height: 24px;
+  }
+  
+  /* Gradient background */
+  body {
+      transition: background 0.5s ease;
+  }
+  
+  /* Sidebar styles */
+  #sidebar {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+  }
+  
+  #sidebar.active {
+      transform: translateX(0);
+  }
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    
+    /* Hamburger menu button styles */
+    #header .hamburger {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    #header .hamburger svg {
+      width: 2rem;
+      height: 2rem;
+      color: black;
+    }
+    
+    @media (min-width: 1024px) {
+      #header .hamburger {
+        display: none;
+      }
+    }
+    
+  
+    /* Sidebar styles */
+  #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 16rem; /* 64 (Tailwind size) */
+      height: 100%;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+    
+    /* Close button styles */
+    #close-sidebar {
+      align-self: flex-end;
+      margin-bottom: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    
+    #close-sidebar svg {
+      width: 2rem;
+      height: 2rem;
+      color: black;
+    }
+    
+    /* Sidebar links */
+    #sidebar a {
+      font-size: 1.125rem; /* lg:text-lg */
+      font-weight: 600; /* font-semibold */
+      text-decoration: none;
+      color: black;
+    }
+    
+    /* Signup button */
+    #sidebar button {
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.125rem; /* lg:text-lg */
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* Hide sidebar for large screens */
+    @media (min-width: 1024px) {
+      #sidebar {
+        display: none;
+      }
+    }
+    
+  
+    /* Carousel Section */
+  #carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3.5rem;
+      gap: 1.5rem;
+      /* border: 3px solid green; */
+      
+
+    }
+    
+    @media (min-width: 1024px) {
+      #carousel {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        gap: 0;
+      }
+    }
+    
+    /* Carousel Text Content */
+    #carousel .text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      /* border: 3px solid blue; */
+      padding-left: 1.5rem; 
+  max-width: 100%; 
+  box-sizing: border-box;
+    }
+    
+    
+    @media (min-width: 1024px) {
+      #carousel .text-content {
+        text-align: left;
+        padding-left: 7rem;
+      }
+    }
+    
+    #carousel-title {
+      font-size: 26px;
+      font-weight: bold;
+      color: white;
+    }
+    
+    @media (min-width: 1024px) {
+      #carousel-title {
+        font-size: 2.5rem;
+      }
+    }
+    
+    #carousel-subtext {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: white;
+    }
+    #carousel-subtext span{
+      color: black;
+    }
+    
+    @media (min-width: 1024px) {
+      #carousel-subtext {
+        font-size: 2rem;
+      }
+    }
+    
+    #carousel-description {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin: 0 auto;
+      color: rgb(0, 0, 0);
+    }
+    
+    @media (min-width: 1024px) {
+      #carousel-description {
+        font-size: 1.125rem;
+        width: 50%;
+        margin: 0;
+      }
+    }
+    
+    #carousel-price {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: white;
+    }
+    
+    @media (min-width: 1024px) {
+      #carousel-price {
+        font-size: 2rem;
+      }
+    }
+    
+    /* Social Media Icons */
+    .social-icons {
+      /* display: none; */
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      display: flex;
+
+    }
+    
+    @media (min-width: 768px) {
+      .social-icons {
+        justify-content: flex-start;
+      }
+    }
+    
+    .social-icons .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid #d1d5db; /* gray-300 */
+      border-radius: 50%;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+    
+    .social-icons .social-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    /* Carousel Slider */
+    #splide-carousel {
+      width: 100%;
+      
+      /* border: 1px solid red; */
+    }
+    
+    @media (min-width: 1024px) {
+      #splide-carousel {
+        width: 50%;
+        
+      }
+    }
+    

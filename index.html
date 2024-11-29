@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+
+    <link rel="stylesheet" href="style.css">
+       
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo"><img src="./imgs/Logo.png" alt=""></div>
+        <nav>
+          <a href="#">Shop</a>
+          <a href="#">Brands</a>
+          <a href="#">Contact us</a>
+          <button>Sign up</button>
+        </nav>
+        <div class="hamburger">
+          <button id="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </header>
+      
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <button id="close-sidebar">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <a href="#">Shop</a>
+        <a href="#">Brands</a>
+        <a href="#">Contact us</a>
+        <button>Sign up</button>
+      </aside>
+      
+    <!-- Carousel Section -->
+    <section id="carousel">
+        <div class="text-content">
+          <h1 id="carousel-title">Exquisite Watches</h1>
+          <h2 id="carousel-subtext">Gold Luxury, <span>Choose Us</span></h2>
+          <p id="carousel-description">
+            Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship.
+          </p>
+          <span id="carousel-price">$499.00</span>
+      
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <img src="./imgs/Vector.png" alt="Facebook Icon">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="./imgs/twitter.png" alt="Twitter Icon">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="./imgs/youtube.png" alt="YouTube Icon">
+            </a>
+          </div>
+        </div>
+      
+        <div id="splide-carousel" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <!-- Images will be dynamically injected here -->
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <!-- JavaScript for sidebar toggle -->
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.add('active');
+        });
+
+        document.getElementById('close-sidebar').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>
+
