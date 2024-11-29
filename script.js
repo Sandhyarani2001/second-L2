@@ -8,8 +8,8 @@ const sectionData = {
         "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
       price: "$499.00",
       image: "./imgs/watch1.png",
-      ambientColor: "#f4aa69",
-      ambientColor1: "#fedabb",
+      ambientColor: "#F4A764",
+      ambientColor1: "#FFDEC2",
     },
     {
       text: "Dainty Timepieces",
@@ -18,8 +18,8 @@ const sectionData = {
         "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
       price: "$469.00",
       image: "./imgs/watch2.png",
-      ambientColor: "#b2b4b4",
-      ambientColor1: "#e1e1e1",
+      ambientColor: "#ADB0B0",
+      ambientColor1: "#E1E1E1",
     },
     {
       text: "Elegant Timepieces",
@@ -28,8 +28,8 @@ const sectionData = {
         "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
       price: "$529.00",
       image: "./imgs/watch3.png",
-      ambientColor: "#39ab60",
-      ambientColor1: "#65d48b",
+      ambientColor: "#30A357",
+      ambientColor1: "#75E39A",
     },
     {
       text: "Refined Timepieces",
@@ -38,8 +38,8 @@ const sectionData = {
         "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
       price: "$599.00",
       image: "./imgs/watch4.png",
-      ambientColor: "#f45b59",
-      ambientColor1: "#fe9e8d",
+      ambientColor: "#F24F4F",
+      ambientColor1: "#FFA895",
     },
   ],
 };
@@ -57,7 +57,11 @@ sectionData.datas.forEach((item) => {
   // Add slide
   const slide = document.createElement("li");
   slide.className = "splide__slide";
-  slide.innerHTML = `<img src="${item.image}" alt="Watch">`;
+  slide.innerHTML = `
+        <div class="watch-container">
+            <img class="watch-image" src="${item.image}" alt="Watch">
+            <img class="watch-shadow" src="./imgs/shadow.png" alt="Shadow">
+        </div>`;
   splideList.appendChild(slide);
 });
 
